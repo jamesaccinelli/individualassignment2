@@ -1,4 +1,4 @@
-# individualassignment2
+# Individual Assignment 2
 
 Water, Ship Textures originate from: https://3dtextures.me/ <br>
 "Shark" and "Mountain" Textures were created by myself via photoshop. <br>
