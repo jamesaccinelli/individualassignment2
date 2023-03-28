@@ -20,7 +20,7 @@ Shader "Custom/Wave"
         SubShader
        {
            CGPROGRAM
-           #pragma surface surf Lambert vertex:vert
+           #pragma surface surf ToonRamp vertex:vert
 
            struct Input
            {
@@ -56,7 +56,7 @@ Shader "Custom/Wave"
                UNITY_INITIALIZE_OUTPUT(Input,o);
 
                float t = _Time * _Speed;
-               float waveHeight = sin(t + v.vertex.x * _Freq) * _Amp + sin(t * 2 + v.vertex.x * _Freq * 2) * _Amp;
+               float waveHeight = sign(sin(t + v.vertex.x * _Freq)) * _Amp + sign(sin(t * 2 + v.vertex.x * _Freq * 2) * _Amp);
                v.vertex.y = v.vertex.y + waveHeight;
                v.normal = normalize(float3(v.normal.x + waveHeight, v.normal.y, v.normal.z));
                o.vertColor = waveHeight + 2;
