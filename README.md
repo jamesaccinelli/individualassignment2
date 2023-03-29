@@ -22,4 +22,6 @@ v2f -> taking info from our appdata <br>
 vertex function -> taking data from v2f and performing various calculations such as transforming our object to clip space <br>
 frag function -> calculating final lighting <br>
 ENDCG <br>
-
+<br>
+Toon Shaded Square Wave: <br>
+I implemented the wave shader basing off of the wave shader provided during the lectures. For this assignment, I built upon it by adding/modifiying a few different things. Firstly as the assignment required, I was able to implement both toon shading as well as the square waveform into the shader. Alongside this, I was also able to add both normal mapping and scrolling/foam to make the water texturing more realistic. You can see screenshots of the shader above for a more in-depth look, however I will give a brief rundown here. The square wave was implemented by simply normalizing the initial sign wave. This places constraints onto the waveheight, allowing us to create a maximum to minimum effect very easily. As for the toon shading, I implented this by adding toonramp into the pragma along side the vertex:vert that was there initially. I then added the base toonshading code as provided from our lectures. This same idea was used for both the normalmapping and the foam. The intial code I believe is unchanged for each technique, however they are simply all combined together into one shader.
