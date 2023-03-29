@@ -2,7 +2,7 @@
 
 Water, Ship Textures originate from: https://3dtextures.me/ <br>
 "Grass" and "Mountain" Textures were created by myself via photoshop prior to assignment. <br>
-Images including diagrams, screenshots, etc: https://drive.google.com/drive/folders/1-juTw9Q-8qpoJ8ifxZZWMoEaGvq54Ig8?usp=share_link (I could not figure out how to add images directly to GitHub) <br>
+Images including diagrams, screenshots, etc: https://drive.google.com/drive/folders/1-juTw9Q-8qpoJ8ifxZZWMoEaGvq54Ig8?usp=share_link (I could not figure out how to add images directly to GitHub, apologies) <br>
 <br>
 <br>
 Difference Between Forward and Deferred Rendering: <br>
