@@ -24,4 +24,15 @@ frag function -> calculating final lighting <br>
 ENDCG <br>
 <br>
 Toon Shaded Square Wave: <br>
-I implemented the wave shader basing off of the wave shader provided during the lectures. For this assignment, I built upon it by adding/modifiying a few different things. Firstly as the assignment required, I was able to implement both toon shading as well as the square waveform into the shader. Alongside this, I was also able to add both normal mapping and scrolling/foam to make the water texturing more realistic. You can see screenshots of the shader above for a more in-depth look, however I will give a brief rundown here. The square wave was implemented by simply normalizing the initial sign wave. This places constraints onto the waveheight, allowing us to create a maximum to minimum effect very easily. As for the toon shading, I implented this by adding toonramp into the pragma along side the vertex:vert that was there initially. I then added the base toonshading code as provided from our lectures. This same idea was used for both the normalmapping and the foam. The intial code I believe is unchanged for each technique, however they are simply all combined together into one shader.
+I implemented the wave shader basing off of the wave shader provided during the lectures. For this assignment, I built upon it by adding/modifiying a few different things. Firstly as the assignment required, I was able to implement both toon shading as well as the square waveform into the shader. Alongside this, I was also able to add both normal mapping and scrolling/foam to make the water texturing more realistic. You can see screenshots of the shader above for a more in-depth look, however I will give a brief rundown here. The square wave was implemented by simply normalizing the initial sign wave. This places constraints onto the waveheight, allowing us to create a maximum to minimum effect very easily. As for the toon shading, I implented this by adding toonramp into the pragma along side the vertex:vert that was there initially. I then added the base toonshading code as provided from our lectures. This same idea was used for both the normalmapping and the foam. The intial code I believe is unchanged for each technique, however they are simply all combined together into one shader. <br>
+<br>
+Example Code 1: <br>
+Words here <br>
+<br>
+Outling + Shadow: <br>
+For this section of the assignment, I decided to implement both outling and custom shadows into the scene. I added outlining to the ship, to make it stand out a little more, and I added shadow to the grass area to make it more defined. For the outlining, I built off of the initial outlining shader made in-class, and then added normal mapping to it, so that I could add texture for realism. The same can be said for the shadows. I built-off the in-class example, then added colour and normal mapping to it to make a more realisitic grass effect. <br>
+<br>
+The outlining shader utilizes two passes to seperate the calculations. The first pass is where the outline colour is calculated and then applied, whereas the second is where the rest of the lighting effects are applied. The shadow shader uses the same 2 pass process, calculating the lighting initially, then finalizing the shadows in the second pass. <br>
+<br>
+Example Code 2: <br>
+<br>
