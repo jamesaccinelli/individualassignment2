@@ -7,6 +7,8 @@ Shader "Custom/VertexExtruding"
 
        _myBump("Bump Texture", 2D) = "bump" {}
        _mySlider("Bump Amount", Range(0,15)) = 1
+
+        _Colour("Colour", Color) = (1,1,1,1)
     }
         SubShader
        {
@@ -21,6 +23,7 @@ Shader "Custom/VertexExtruding"
 
            sampler2D _myBump;
            half _mySlider;
+           float4 _Colour;
 
            struct Input
            {
@@ -45,7 +48,7 @@ Shader "Custom/VertexExtruding"
 
            void surf(Input IN, inout SurfaceOutput o)
            {
-               o.Albedo = tex2D(_MainTex, IN.uv_MainTex);
+               o.Albedo = tex2D(_MainTex, IN.uv_MainTex) * _Colour;
                o.Normal = UnpackNormal(tex2D(_myBump, IN.uv_myBump)); //rgb to xyz
                o.Normal *= float3(_mySlider, _mySlider, 1);
            }
