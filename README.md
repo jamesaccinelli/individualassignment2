@@ -36,3 +36,5 @@ The outlining shader utilizes two passes to seperate the calculations. The first
 <br>
 Example Code 2: <br>
 <br>
+Additional Shader -> Shadow Lines <br>
+For this section of the assignment, I elected to add shadow lines to the rock/mountain area of the scene. I chose to do this to add a more cartoony theme present in the scene. As for the shader itself, it consists of 2 passes, one to seperate the shadow casting (Pass 2), and one for creating the shadow lines as well as handling other properties like textures. The shader utilizes a vertex and fragment shader in both passes. We then tell unity to ignore lightmaps, so that we can create our own shadows. In our appdata we have standard values such as position, normal, and uv coordinates. In our v2f, we have our uv coordinates, colour, position, and shadow coordinates. In our vertex shader we calculate our shadow. We do so by converting the normal to world space, then converting it to something the fragment shader can use. In our fragment shader, we use the SHADOW_ATTENUATION boolean value to whether an object will recieve the main object's shadows or not (if the lines appear on it or not).
